@@ -13,7 +13,7 @@
     0% {
         opacity: 0%;
     }
-    50% {
+    33% {
         opacity: 0%;
     }
     100% {
@@ -22,31 +22,17 @@
 }
 
 @keyframes disappear {
-    from {
+    0% {
         opacity: 100%;
     }
-    to {
+    30% {
+        opacity: 100%;
+    }
+    100% {
         opacity: 0%;
     }
 }
 
-@keyframes linksOpen {
-    from {
-        left: -16em;
-    }
-    to {
-        left: 1.5vh;
-    }
-}
-
-@keyframes restoOpen {
-    from {
-        bottom: -6em;
-    }
-    to {
-        bottom: 1.5vh;
-    }
-}
 
 // --------------- Shorters --------------- 
 
@@ -85,10 +71,10 @@ $font-montserrat: 'Montserrat', sans-serif;
     .kiwiIndex {
         z-index: 1;
         height: 35vh;
-        margin-bottom: 4vh; // para centrarlo mejor en celulares
+        margin-bottom: 8vh; // para centrarlo mejor en celulares
         position: absolute;
         opacity: 0%;
-        animation: disappear 1s ease-in-out;
+        animation: disappear 1.5s ease-in;
     }
 }
 
@@ -98,11 +84,12 @@ $font-montserrat: 'Montserrat', sans-serif;
     justify-content: start;
     display: flex;
     overflow: hidden;
-    height: 91vh; // para ocupar el 100% le faltan 4vh
+    height: 84vh; // para ocupar el 100% le faltan 11vh
+    margin-bottom: 8vh; // para centrarlo mejor en celulares
     width: 95vw;
     background-color: rgba(186, 186, 186, 0.335);
     border-radius: 15px;
-    animation: appear 2s ease-in-out;
+    animation: appear 3s ease-in-out;
 
     header{
         margin: 4vh 0;
@@ -116,7 +103,7 @@ $font-montserrat: 'Montserrat', sans-serif;
         @include flex-center;
         @include inIndexBoxes;
         justify-content: start;
-        height: 65vh; // para ocupar el 100% le faltan 4vh
+        height: 58vh; // para ocupar el 100% le faltan 11vh
         h1{
             font-family: "Dancing Script", cursive;
             font-size: 6vh;
@@ -137,7 +124,8 @@ $font-montserrat: 'Montserrat', sans-serif;
             aside{
                 @include inIndexBoxes;
                 background-color: rgba(186, 186, 186, 0.2);
-                flex-grow: wrap;
+                @include flex-center;
+                text-align: center;
                 width: 40%;
                 height: 40%;
             }

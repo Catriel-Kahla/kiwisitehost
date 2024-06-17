@@ -10,7 +10,7 @@
   0% {
     opacity: 0%;
   }
-  50% {
+  33% {
     opacity: 0%;
   }
   100% {
@@ -18,27 +18,14 @@
   }
 }
 @keyframes disappear {
-  from {
+  0% {
     opacity: 100%;
   }
-  to {
+  30% {
+    opacity: 100%;
+  }
+  100% {
     opacity: 0%;
-  }
-}
-@keyframes linksOpen {
-  from {
-    left: -16em;
-  }
-  to {
-    left: 1.5vh;
-  }
-}
-@keyframes restoOpen {
-  from {
-    bottom: -6em;
-  }
-  to {
-    bottom: 1.5vh;
   }
 }
 .indexBody {
@@ -56,10 +43,10 @@
 .indexBody .kiwiIndex {
   z-index: 1;
   height: 35vh;
-  margin-bottom: 4vh;
+  margin-bottom: 8vh;
   position: absolute;
   opacity: 0%;
-  animation: disappear 1s ease-in-out;
+  animation: disappear 1.5s ease-in;
 }
 
 .indexMain {
@@ -71,11 +58,12 @@
   justify-content: start;
   display: flex;
   overflow: hidden;
-  height: 91vh;
+  height: 84vh;
+  margin-bottom: 8vh;
   width: 95vw;
   background-color: rgba(186, 186, 186, 0.335);
   border-radius: 15px;
-  animation: appear 2s ease-in-out;
+  animation: appear 3s ease-in-out;
 }
 .indexMain header {
   margin: 4vh 0;
@@ -100,7 +88,7 @@
   background-color: rgba(186, 186, 186, 0.335);
   border-radius: 8px;
   justify-content: start;
-  height: 65vh;
+  height: 58vh;
 }
 .indexMain section h1 {
   font-family: "Dancing Script", cursive;
@@ -127,7 +115,11 @@
   background-color: rgba(186, 186, 186, 0.335);
   border-radius: 8px;
   background-color: rgba(186, 186, 186, 0.2);
-  flex-grow: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   width: 40%;
   height: 40%;
 }
