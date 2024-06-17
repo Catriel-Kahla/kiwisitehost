@@ -6,12 +6,23 @@
   box-sizing: border-box;
 }
 
-@keyframes rightOpen {
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes disappear {
   from {
-    right: -16em;
+    opacity: 100%;
   }
   to {
-    right: 1.5vh;
+    opacity: 0%;
   }
 }
 @keyframes linksOpen {
@@ -30,28 +41,107 @@
     bottom: 1.5vh;
   }
 }
-.indexBody,
-.body {
-  overflow: hidden;
-}
-
-.body {
+.indexBody {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #00DBDE;
+  background-image: linear-gradient(225deg, #b300ff 0%, #007779 50%, #b300ff 100%);
   height: 100vh;
   width: 100vw;
-  background-color: #00DBDE;
-  background-image: linear-gradient(225deg, #b300ff 0%, rgba(0, 218, 222, 0.5490196078) 50%, #b300ff 100%);
 }
-.body .kiwiIndex {
+.indexBody .kiwiIndex {
+  z-index: 1;
   height: 35vh;
+  position: absolute;
+  opacity: 0%;
+  animation: disappear 0.5s ease-in-out;
 }
-.body h1 {
+
+.indexMain {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  display: flex;
+  overflow: hidden;
+  height: 95vh;
+  width: 95vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 15px;
+  animation: appear 1s ease-in-out;
+}
+.indexMain header {
+  margin: 4vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  height: 5vh;
+}
+.indexMain header img {
+  height: 8vh;
+}
+.indexMain section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  justify-content: start;
+  height: 69vh;
+}
+.indexMain section h1 {
   font-family: "Dancing Script", cursive;
-  font-size: 5vw;
+  font-size: 6vh;
   font-weight: 800;
   font-optical-sizing: auto;
   font-style: normal;
+  margin: 2vh 0;
+}
+.indexMain section article {
+  display: flex;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  background-color: rgba(255, 0, 0, 0);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0vh;
+  height: 49vh;
+}
+.indexMain section article aside {
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  background-color: rgba(186, 186, 186, 0.2);
+  flex-grow: wrap;
+  width: 40%;
+  height: 40%;
+}
+.indexMain section article aside:hover {
+  background-color: rgba(170, 181, 255, 0.297);
+  box-shadow: 0 0 20px rgba(0, 72, 255, 0.208);
+}
+.indexMain footer {
+  margin: 4vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  height: 5vh;
 }/*# sourceMappingURL=style.css.map */

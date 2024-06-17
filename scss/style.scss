@@ -9,12 +9,24 @@
 
 // --------------- animations --------------- 
 
-@keyframes rightOpen {
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes disappear {
     from {
-        right: -16em;
+        opacity: 100%;
     }
     to {
-        right: 1.5vh;
+        opacity: 0%;
     }
 }
 
@@ -38,7 +50,7 @@
 
 // --------------- Shorters --------------- 
 
-$bg-gradient: linear-gradient(225deg, #b300ff 0%, #00dade8c 50%, #b300ff 100%);
+$bg-gradient: linear-gradient(225deg, #b300ff 0%, #007779 50%, #b300ff 100%);
 $bg-gradient-alt: linear-gradient(225deg, #d700dbaf 0%, #00aeb12f 50%, #d700dbaf 100%);
 $box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.404);
 $hover-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.6);
@@ -53,32 +65,94 @@ $font-montserrat: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.indexBody,
-.body {
-    overflow: hidden;
+@mixin inIndexBoxes{
+    width: 90vw;
+    background-color: rgba(186, 186, 186, 0.335);
+    border-radius: 8px;
 }
 
-.body {
+.indexBody{
     @include flex-center;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    overflow: hidden;
     background-color: #00DBDE;
     background-image: $bg-gradient;
+    height: 100vh;
+    width: 100vw;
+    .kiwiIndex {
+        z-index: 1;
+        height: 35vh;
+        position: absolute;
+        opacity: 0%;
+        animation: disappear 0.5s ease-in-out;
+    }
+}
+
+.indexMain {
+    z-index: 2;
+    @include flex-center;
+    justify-content: start;
+    display: flex;
+    overflow: hidden;
+    height: 95vh;
+    width: 95vw;
+    background-color: rgba(186, 186, 186, 0.335);
+    border-radius: 15px;
+    animation: appear 1s ease-in-out;
+
+    header{
+        margin: 4vh 0;
+        @include flex-center;
+        @include inIndexBoxes;
+        height: 5vh;
+        img{height: 8vh}
+    }
+
+    section{
+        @include flex-center;
+        @include inIndexBoxes;
+        justify-content: start;
+        height: 69vh;
+        h1{
+            font-family: "Dancing Script", cursive;
+            font-size: 6vh;
+            font-weight: 800;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 2vh 0;
+        }
+        article{
+            display: flex;
+            @include inIndexBoxes;
+            background-color: rgba(255, 0, 0, 0);
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0vh;
+            height: 49vh;
+            aside{
+                @include inIndexBoxes;
+                background-color: rgba(186, 186, 186, 0.2);
+                flex-grow: wrap;
+                width: 40%;
+                height: 40%;
+            }
+            aside:hover{
+                background-color: rgba(170, 181, 255, 0.297);
+                box-shadow: 0 0 20px rgba(0, 72, 255, 0.208);
+            }
+        }
+    }
+
+    footer{
+        margin: 4vh 0;
+        @include flex-center;
+        @include inIndexBoxes;
+        height: 5vh;
+    }
 
     
-
-    .kiwiIndex {
-        height: 35vh;
-    }
-
-    h1{
-        font-family: "Dancing Script", cursive;
-        font-size: 5vw;
-        font-weight: 800;
-        font-optical-sizing: auto;
-        font-style: normal;
-    }
 }
