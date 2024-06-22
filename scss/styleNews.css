@@ -147,7 +147,8 @@
   margin-bottom: 2vh;
 }
 .indexMain section #articleNew img {
-  width: 50vw;
+  width: 70vw;
+  border-radius: 4px;
 }
 .indexMain footer {
   margin: 4vh 0;
