@@ -1,0 +1,52 @@
+{
+    "articles":[
+        {
+            "name": "Juntaditas",
+            "img": "/images/news/juntaditas.jpg",
+            "date": "22/06",
+            "p": "Nuevas juntadas se han formado, con la integración de; Ari, Cami, Barrios, Agus, Milton, Katry y un integrante nuevo que parece haber ganado el corazón de Cami."
+        },
+        {
+            "name": "Teg con un mismo objetivo",
+            "img": "/images/news/tegConUnMismoObjetivo.jpg",
+            "date": "22/06",
+            "p": "En una juntada reciente, Ari y Katry han coincidido en una victoria en el Teg derrotando a Barrios, quien cada día mejora más."
+        },
+        {
+            "name": "Tiny Waves",
+            "img": "/images/news/tinyWaves.jpg",
+            "date": "22/06",
+            "p": "Ame sigue logrando que Katry corra a Rosario a tomar un rico desayuno acompadado de su hermosa novia."
+        },
+        {
+            "name": "Cumple Tio y Nona Marta",
+            "img": "/images/news/cumpleTioYNonaMarta.jpg",
+            "date": "22/06",
+            "p": "Felíz cumpleaños para dos geminianos que cumplen seguido; 29 y 30 de Mayo!"
+        },
+        {
+            "name": "Bienvenidos MiniPotus",
+            "img": "/images/news/bienvenidosMiniPotus.jpg",
+            "date": "22/06",
+            "p": "Nuevos MiniPotus han nacido; Arya para Cocó y Myrcella para Jeanne, se aproximan nuevos..."
+        },
+        {
+            "name": "Agus viaja a Salta",
+            "img": "/images/news/agusViajaASalta.jpg",
+            "date": "22/06",
+            "p": "Agus ha tenido un viaje express donde ha disfrutado completamente, encontrandose con llamas de verdad y de sal, comiendo caramelos de coca y alfajores tucumanes."
+        },
+        {
+            "name": "Noticias sobre Paris",
+            "img": "/images/news/noticiasSobreParis.jpg",
+            "date": "22/06",
+            "p": "Cada día más loco y celoso de la relación de Ame y Katry."
+        },
+        {
+            "name": "Departamentito Nuevo",
+            "img": "/images/news/departamentitoNuevo.jpg",
+            "date": "22/06",
+            "p": "Luego de soportar muchos meses a la vecina rompe huevos, pasar muchos momentos icónicos, juntadas con Ame y con amigos, es hora de cambiar de aires del 6A al 4D."
+        }
+    ]
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// --------------- animations --------------- 
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    33% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+// --------------- Shorters --------------- 
+
+$bg-gradient: linear-gradient(225deg, #b300ff 0%, #007779 50%, #b300ff 100%);
+$bg-gradient-alt: linear-gradient(225deg, #d700dbaf 0%, #00aeb12f 50%, #d700dbaf 100%);
+$box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.404);
+$hover-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.6);
+$white-translucent: rgba(255, 255, 255, 0.4);
+$white-semi-translucent: rgba(255, 255, 255, 0.2);
+$font-dancing: 'Dancing Script', cursive;
+$font-montserrat: 'Montserrat', sans-serif;
+
+// --------------- Code --------------- 
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin inIndexBoxes{
+    width: 90vw;
+    background-color: rgba(186, 186, 186, 0.335);
+    border-radius: 8px;
+}
+
+.indexBody{
+    @include flex-center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #00DBDE;
+    background-image: $bg-gradient;
+    height: 100vh;
+    width: 100vw;
+}
+
+.indexMain {
+    z-index: 2;
+    @include flex-center;
+    justify-content: start;
+    display: flex;
+    overflow: hidden;
+    height: 84vh; // para ocupar el 100% le faltan 11vh
+    margin-bottom: 8vh; // para centrarlo mejor en celulares
+    width: 95vw;
+    background-color: rgba(186, 186, 186, 0.335);
+    border-radius: 15px;
+    animation: appear 1s ease-in-out;
+
+    header{
+        margin: 4vh 0;
+        @include flex-center;
+        @include inIndexBoxes;
+        height: 5vh;
+        img{height: 8vh}
+    }
+
+    section{
+        @include flex-center;
+        @include inIndexBoxes;
+        justify-content: start;
+        height: 58vh; // para ocupar el 100% le faltan 11vh - 58vh
+        
+        h1{
+            font-family: "Dancing Script", cursive;
+            font-size: 6vh;
+            font-weight: 800;
+            font-optical-sizing: auto;
+            font-style: normal;
+            margin: 2vh 0;
+        }
+        #articleNews{
+            display: flex;
+            @include inIndexBoxes;
+            background-color: rgba(255, 0, 0, 0);
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0vh;
+            height: 49vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            aside{
+                @include inIndexBoxes;
+                background-color: rgba(186, 186, 186, 0.2);
+                @include flex-center;
+                text-align: center;
+                width: 40%;
+                height: 40%;
+                margin: 1vh 0;
+            }
+            aside:hover{
+                background-color: rgba(170, 181, 255, 0.297);
+                box-shadow: 0 0 20px rgba(0, 72, 255, 0.208);
+            }
+        }
+
+        #articleNew{
+            display: none;
+            @include inIndexBoxes;
+            background-color: rgba(255, 0, 0, 0);
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0vh;
+            height: 49vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            div{
+                #newsBack{
+                    position: absolute;
+                    left: 8vw;
+                }
+                #updateDate{
+                    position: absolute;
+                    top: 72vh;
+                    left: 82vw;
+                }
+
+                display: flex;
+            }
+            hr{
+                width: 80%;
+                border-color: rgba(0, 0, 0, 0.393);
+                margin-bottom: 2vh;
+            }
+            p{
+                width: 80%;
+                margin-bottom: 2vh;
+            }
+            img{
+                width: 50vw;
+            }
+            
+        }
+    }
+
+    footer{
+        margin: 4vh 0;
+        @include flex-center;
+        @include inIndexBoxes;
+        height: 5vh;
+    }
+
+    
+}
