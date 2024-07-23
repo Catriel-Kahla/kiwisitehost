@@ -1,6 +1,11 @@
 {
     "articles":[
         {
+            "name": "Nuevas Noticias!",
+            "date": "23/07",
+            "p": "Luego de un mes, se añadirán nuevas noticias de Junio y Julio a Kiwi News! Además del pasado, hablemos de lo que viene: Cumples de Mamá Katry (21/08), Chiara (15/09), Cami (10/10), Agus (12/10), Katry (13/11), Milton (21/11), Jeanne (14/12) y Papá Katry (16/12). También se acerca Halloween, Navidad y Fin de año!!! PD: Las nuevas noticias se agregarán este Viernes 26/07"
+        },
+        {
             "name": "Juntaditas",
             "img": "/images/news/juntaditas.jpg",
             "date": "22/06",
