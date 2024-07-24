@@ -12,6 +12,13 @@ if (document.getElementById("kiwiSiteBack")) {
     });
 }
 
+// Manejo del botón de redirección a KiwiAwards
+if (document.getElementById("kiwiAwardsBut")) {
+    document.getElementById("kiwiAwardsBut").addEventListener('click', () => {
+        location.href = "pages/kiwiAwards.html"; // Redirigir a la página KiwiNews
+    });
+}
+
 // Manejo del botón de redirección a KiwiNews
 if (document.getElementById("kiwiNewsBut")) {
     document.getElementById("kiwiNewsBut").addEventListener('click', () => {
