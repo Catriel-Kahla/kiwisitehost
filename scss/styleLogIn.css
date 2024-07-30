@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.indexBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #00DBDE;
+  background-image: linear-gradient(225deg, #b300ff 0%, #007779 50%, #b300ff 100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.indexMain {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  display: flex;
+  overflow: hidden;
+  height: 84vh;
+  margin-bottom: 8vh;
+  width: 95vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 15px;
+  animation: appear 1s ease-in-out;
+}
+.indexMain header {
+  margin: 4vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  height: 5vh;
+}
+.indexMain header img {
+  height: 8vh;
+}
+.indexMain section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  justify-content: start;
+  height: 58vh;
+}
+.indexMain section h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 6vh;
+  font-weight: 800;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 2vh 0;
+}
+.indexMain section #articleLogIn {
+  display: flex;
+  background-color: rgba(255, 0, 0, 0);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.indexMain section #articleLogIn input {
+  background-color: rgba(179, 0, 255, 0);
+  margin-top: 3vh;
+  width: 55vw;
+  border-radius: 7px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 20px;
+}
+.indexMain section #articleLogIn #getInfo:hover {
+  background-color: rgba(19, 141, 143, 0.2431372549);
+}
+.indexMain section #articleLogIn p {
+  margin-top: 3vh;
+  width: 65vw;
+  text-align: center;
+}
+.indexMain section #articleNew {
+  display: none;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  background-color: rgba(255, 0, 0, 0);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0vh;
+  height: 49vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.indexMain section #articleNew div {
+  display: flex;
+}
+.indexMain section #articleNew div #newsBack {
+  position: absolute;
+  left: 8vw;
+}
+.indexMain section #articleNew div #updateDate {
+  position: absolute;
+  top: 72vh;
+  left: 82vw;
+}
+.indexMain section #articleNew hr {
+  width: 80%;
+  border-color: rgba(0, 0, 0, 0.393);
+  margin-bottom: 2vh;
+}
+.indexMain section #articleNew p {
+  width: 80%;
+  margin-bottom: 2vh;
+}
+.indexMain section #articleNew img {
+  width: 70vw;
+  border-radius: 4px;
+}
+.indexMain footer {
+  margin: 4vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  background-color: rgba(186, 186, 186, 0.335);
+  border-radius: 8px;
+  height: 5vh;
+}/*# sourceMappingURL=styleLogIn.css.map */
