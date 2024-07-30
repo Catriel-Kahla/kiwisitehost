@@ -8,6 +8,12 @@ if (sessionStorage.getItem('activeUser')){
     window.location.href = "kiwiLogIn.html";
 }
 
+if (document.getElementById("kiwiSiteBack")) {
+    document.getElementById("kiwiSiteBack").addEventListener('click', () => {
+        location.href = "../index.html"; // Redirigir hacia atrás a la página de inicio
+    });
+}
+
 function getInfo(){
     let userBox = document.getElementById("userBox").value;
     let passBox = document.getElementById("passBox").value;
