@@ -27,7 +27,7 @@ const data = {
             "order": "4"
         },
         {
-            "name": "Chiara vasques",
+            "name": "Chia",
             "pass": "vasC",
             "pts": "247,08",
             "order": "5"
